@@ -16,6 +16,31 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+
+<header>
+      <div>
+        <%= image_tag("angel.gif", class:"head-logo", style:"height: 35px;") %>
+        Ostomy Angels Donate and Swap
+      </div>
+      <nav>
+        <a href="#">About Us</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+        <a href="#">Links</a>
+      </nav>
+    </header>
     <%= yield %>
+    <footer>
+      <div>
+        <%= image_tag("angel.gif", style: "height:35px", class: "head-logo;")%>
+        Ostomy Angels Donate and Swap
+      </div>
+      <p class="footer-tagline">
+        the best source for complimentary ostomy supplies
+      </p>
+      <h6 class="copyright">
+        Copyright 2018, Ostomy Angels Donate and Swap
+      </h6>
+    </footer>
   </body>
 </html>
