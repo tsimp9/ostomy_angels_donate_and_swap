@@ -1,0 +1,2 @@
+class NeededSupply < ApplicationRecord
+end

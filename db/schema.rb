@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_064139) do
+ActiveRecord::Schema.define(version: 2018_11_01_043647) do
+
+  create_table "available_supplies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "supply_id"
+    t.integer "quantity_available"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "needed_supplies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "supply_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "supplies", force: :cascade do |t|
+    t.string "category"
+    t.string "subcategory"
+    t.string "brand"
+    t.string "product_id"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

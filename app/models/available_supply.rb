@@ -1,0 +1,2 @@
+class AvailableSupply < ApplicationRecord
+end

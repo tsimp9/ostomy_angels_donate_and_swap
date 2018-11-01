@@ -8,4 +8,9 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
+#This will create a home page link for each method added to Pages Controller.
+  PagesController.action_methods.each do |action|
+   get "/#{action}", to: "pages##{action}", as: "#{action}_page"
+ end
+
 end
