@@ -1,0 +1,11 @@
+<h1>Available Supplies for Donation</h1>
+
+<h2>Create a new available supply (a supply you have on-hand for donation)</h2>
+<%= form_for AvailableSupply.new, url: {action: "create"} do |f| %>
+ Category :<%= f.text_field :supply::category %>
+ Brand :<%= f.text_field :brand %>
+ Product ID :<%= f.text_field :product_id %>
+ Description :<%= f.text_field :description %>
+  <%= f.submit "Create" %>
+<% end %>
+

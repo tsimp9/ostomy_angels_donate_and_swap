@@ -1,0 +1,9 @@
+<h1>Needed Supplies</h1>
+<h2>Create a needed supply (a supply that is in need)</h2>
+<%= form_for @supply, url: {action: "create"} do |f| %>
+ Category :<%= f.text_field :category %>
+ Brand :<%= f.text_field :brand %>
+ Product ID :<%= f.text_field :product_id %>
+ Description :<%= f.text_field :description %>
+  <%= f.submit "Create" %>
+<% end %>

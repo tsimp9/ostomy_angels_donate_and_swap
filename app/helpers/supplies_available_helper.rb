@@ -1,0 +1,2 @@
+module SuppliesAvailableHelper
+end
