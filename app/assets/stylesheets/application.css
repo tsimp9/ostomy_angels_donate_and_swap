@@ -72,6 +72,14 @@ footer {
   margin: -87px 21px 0px 187px;
 }
 
+.signout {
+  float: right;
+}
+
+.signout:link {
+  color: white;
+}
+  
 header div {
   display: inline;
   padding: 0px 0px 0px 22px;

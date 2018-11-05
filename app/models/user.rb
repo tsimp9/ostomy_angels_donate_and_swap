@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   has_many :available_supplies
 
+  has_many  :shippingaddresses
+
   has_one_attached :avatar
 
 end

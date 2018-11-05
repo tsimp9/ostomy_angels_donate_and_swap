@@ -1,0 +1,16 @@
+<div class="c-section">
+  <h1 class="c-title c-title--large">Browse All Ostomy Supplies</h1>
+</div>
+<div class="c-section">
+  <% @supplies.each do |supply| %>
+    <div class="c-card u-margin-bottom-small">
+      <div class="c-card">
+      	<h4 class="c-title c-title--tiny"><%= supply.product_name %></h4>
+        <h4 class="c-title"><%= supply.brand + ' ' + supply.product_id %></h4>
+        <h4 class="c-title c-title--tiny"><%= supply.description %></h4>
+        <h4 class="c-title c-title--tiny"><%= supply.category %></h4>
+        
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -17,6 +17,14 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
+<!-- Sign up link -->
+<%= link_to("Sign Up", new_user_registration_path) %>
+
+<!-- Sign out link -->
+<div class="signout">
+<%= link_to("Sign Out", destroy_user_session_path, :method => 'delete') %>
+</div>
+
 <header>
       <div>
         <%= image_tag("angel.gif", class:"head-logo", style:"height: 35px;") %>
@@ -24,7 +32,7 @@
       </div>
       <nav>
          <a href="<%= pages_about_path %>">About Us</a>
-         <a href="<%= pages_faq_path %>">Faq</a>
+         <a href="<%= pages_faq_path %>">FAQ</a>
          <a href="<%= pages_contact_path %>">Contact</a>
          <a href="<%= pages_links_path %>">Links</a>
       </nav>
