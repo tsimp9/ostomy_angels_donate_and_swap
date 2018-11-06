@@ -33,7 +33,56 @@ supplies = [
     product_id: "120105",
     description: "1.7 oz (50ml) Spray Bottle",
     image_name: "coloplast_120105_adhesive_remover.jpeg"
-  }
+  },
+  { category: "Rings",
+    product_name: "Adapt CeraRing Barrier Rings",
+    brand: "Hollister",
+    product_id: "8805",
+    description: "Size - 2 inches/4.5mm width Ceramide-infused barrier rings (not rubber latex) designed to help support healthy skin and provide a custom fit to help prevent leakage and peristomal skin complications",
+    image_name: "hollister_8805_rings.jpg"
+  },
+  { category: "Skin Barriers (Wafers) and Convex Inserts",
+    product_name: "New Image FormaFlex Shape-to-Fit Skin Barriers",
+    brand: "Hollister",
+    product_id: "14104",
+    description: "2-3/4 inches/70 mm flange, up to 2-1/4 inches/57 mm, blue match wafers",
+    image_name: "hollister_14104_wafer.jpg"
+  },
+  { category: "Stoma Caps",
+    product_name: "SUR-FIT® Natura® Flange Cap with Filter, 1-3/4 Flange",
+    brand: "Convatec",
+    product_id: "401909",
+    description: "Opaque stoma cap with 1-sided comfort panel",
+    image_name: "convatec_401909_cap.jpeg"
+  },
+  { category: "Paste",
+    product_name: "Osto-Paste",
+    brand: "Montreal Ostomy (BE/MO)",
+    product_id: "(MO)OSTOPASTE",
+    description: "4 oz tube of no sting and alcohol-free paste designed for use on irritated and sore skin",
+    image_name: "montreal_ostopaste.png"
+  },
+  { category: "Sheets and Strips",
+    product_name: "Skin Barrier Sheet",
+    brand: "Safe n Simple",
+    product_id: "SNS21605",
+    description: "Skin friendly water resistant/hydrocolloid sheet that protects the skin from stoma output and gentle on skin",
+    image_name: "safensimple_sheet_sns21605.png"
+  },
+  { category: "Skin Prep Wipes",
+    product_name: "Skin Prep Protective Dressings - Wipes",
+    brand: "Smith & Nephew",
+    product_id: "420400",
+    description: "Protective dressing that forms a protective film to help tapes and films adhere better",
+    image_name: "smith_wipes_420400.jpg"
+  },
+  { category: "Deodorants",
+    product_name: "Brava Lubricating Deodorant",
+    brand: "Coloplast",
+    product_id: "12060BX",
+    description: "0.25-oz satchets",
+    image_name: "brava_deodorant_satchet.jpg"
+  },
 ]
 
 supplies.each do |supply|
