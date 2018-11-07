@@ -27,6 +27,13 @@ supplies = [
     description: "Pre-sized 1-9/16 in, 12 inch length",
     image_name: "hollister_8940.jpg"
   },
+  { category: "Bags/Pouches",
+    product_name: "New Image Lock N Roll Microseal Closure Drainable Pouches",
+    brand: "Hollister",
+    product_id: "18194",
+    description: "Transparent two piece, 2-3/4 inches flange (Blue), integrated (Velcro-like) closure system with odor barrier",
+    image_name: "hollister_18194.jpg"
+  },
   { category: "Adhesive Removers",
     product_name: "Brava Adhesive Remover Spray 1.7 oz Bottle",
     brand: "Coloplast",
@@ -76,6 +83,13 @@ supplies = [
     description: "Protective dressing that forms a protective film to help tapes and films adhere better",
     image_name: "smith_wipes_420400.jpg"
   },
+  { category: "Powders",
+    product_name: "Ostomy Protective Powder",
+    brand: "Cardinal Health Essentials",
+    product_id: "ZR1OZOPA",
+    description: "1-oz bottle pectin-based powder protects irritated skin around the stoma. Increases wear time. Absorbs moisture.",
+    image_name: "cardinal_powder.jpeg"
+  },
   { category: "Deodorants",
     product_name: "Brava Lubricating Deodorant",
     brand: "Coloplast",
@@ -83,6 +97,34 @@ supplies = [
     description: "0.25-oz satchets",
     image_name: "brava_deodorant_satchet.jpg"
   },
+  { category: "Deodorants",
+    product_name: "Devko Deodorant Tablets",
+    brand: "Parthenon",
+    product_id: "PADEVCO",
+    description: "Tablets for odor control inside ostomy pouches or bag liners",
+    image_name: "devko_tablets.jpg"
+  },
+  { category: "Irrigation Kits - Ostomy",
+    product_name: "Visi-Flow® Irrigator with Stoma Cone",
+    brand: "Convatec",
+    product_id: "401989",
+    description: "Designed for people with a colostomy where irrigation is indicated. Front-fill reusable bag",
+    image_name: "convatec_visiflow_irrigator_401989.jpeg"
+  },
+  { category: "Ostomy Accessories",
+    product_name: "Ostomy Belt",
+    brand: "Phoeix Ostomy",
+    product_id: "PS300",
+    description: "Size Medium/Large (26\"- 36\")",
+    image_name: "phoenix_ostomy_belt_ps300.jpeg"
+  },
+  { category: "Ostomy Accessories",
+    product_name: "Biodegradable Colostomy Pouch Liners",
+    brand: "Colo-Majic",
+    product_id: "N/A",
+    description: "Size Large to fit diameters from 2¼ inch (57mm) to 2¾ inch (70mm)",
+    image_name: "colo_majic.jpg"
+  }
 ]
 
 supplies.each do |supply|
