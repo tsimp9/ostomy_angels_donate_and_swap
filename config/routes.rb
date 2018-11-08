@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'supply/show'
-  get 'supply/index'
-  get 'supply/new'
-  get 'supply/create'
-  get 'supply/edit'
+  resources :supplies
   get 'home/index'
   devise_for :users, controllers: {
         registrations: 'users/registrations'
@@ -37,7 +33,6 @@ Rails.application.routes.draw do
   get 'pages/links'
   
   
-    
   
 
 #This will create a home page link for each method added to Pages Controller.

@@ -1,0 +1,10 @@
+<h1>Create a New Supply</h1>
+
+<%= simple_form_for @supply do |f| %>
+  <%= f.input :category %>
+  <%= f.input :brand %>
+  <%= f.input :product_name %>
+  <%= f.input :product_id %>
+  <%= f.input :description %>
+  <%= f.button :submit, 'Create' %>
+<% end %>

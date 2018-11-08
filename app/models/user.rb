@@ -7,12 +7,12 @@ class User < ApplicationRecord
   validates :name, uniqueness: true
 
   has_many :supplies
+  # has_many :available_supplies through :supplies
 
-  has_many :needed_supplies
+  # has_many :supplies
+  # has_many :needed_supplies through :supplies
 
-  has_many :available_supplies
-
-  has_many  :shippingaddresses
+  has_many :shippingaddresses
 
   has_one_attached :avatar
 
