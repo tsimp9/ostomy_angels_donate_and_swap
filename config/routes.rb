@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  get 'reservations/index'
-  get 'reservations/show'
-  get 'reservations/new'
-  get 'reservations/create'
-  get 'reservations/update'
-  get 'reservations/edit'
-  get 'reservations/destroy'
-  resources :supplies
+  resources :reservations
+  resources :supplies do
+    member do
+      get "reserve"
+    end
+  end
   get 'home/index'
   devise_for :users, controllers: {
         registrations: 'users/registrations'
@@ -18,29 +16,10 @@ Rails.application.routes.draw do
   patch "profile", to: "profile#update"
   get "profile/edit", to: "profile#edit"
 
-  # get 'profile/show'
-  # get 'profile/edit'
-  # get 'profile/update'
-
-  get 'supplies_available/index'
-  get 'supplies_available/show'
-  get 'supplies_available/new'
-  get 'supplies_available/create'
-  get 'supplies_available/edit'
-  get 'supplies_available/destroy'
-  get 'supplies_needed/index'
-  get 'supplies_needed/show'
-  get 'supplies_needed/new'
-  get 'supplies_needed/create'
-  get 'supplies_needed/edit'
-
   get 'pages/about'
   get 'pages/contact'
   get 'pages/faq'
-  get 'pages/links'
-  
-  
-  
+  get 'pages/links'  
 
 #This will create a home page link for each method added to Pages Controller.
   PagesController.action_methods.each do |action|

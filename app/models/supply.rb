@@ -1,6 +1,6 @@
 class Supply < ApplicationRecord
-  belongs_to        :user, optional: true
-  belongs_to :reserved_user, class_name: "User"
+  belongs_to :user, optional: true
+  belongs_to :reserved_user, class_name: "User", foreign_key: :reserved_user_id, optional: true
 
   has_one_attached  :image
 

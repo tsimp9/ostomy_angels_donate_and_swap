@@ -5,13 +5,20 @@
   <% @supplies.each do |supply| %>
     <div class="c-card u-margin-bottom-small">
       <div class="c-card">
-      <% if supply.image.attached? %>
-        <h4 class="c-title c-title--tiny"><%= image_tag(url_for(supply.image)) %></h4>
-      <% end %>
+        <% if supply.image.attached? %>
+          <h4 class="c-title c-title--tiny"><%= image_tag(url_for(supply.image)) %></h4>
+        <% end %>
         <h4 class="c-title c-title--tiny"><%= supply.product_name %></h4>
         <h4 class="c-title"><%= supply.brand + ' ' + supply.product_id %></h4>
         <h4 class="c-title c-title--tiny">Description: <%= supply.description %></h4>
-        <h4 class="c-title c-title--tiny">Category: <%= supply.category %></h4>       
+        <h4 class="c-title c-title--tiny">Category: <%= supply.category %></h4> 
+        <% if supply.user == current_user %>
+          (This is your supply)
+        <% elsif supply.reserved_user == current_user %>
+          You have already reserved this item. <%= link_to "Cancel Reservation" %>
+        <% else %>
+          <%= link_to "Reserve This Item", reserve_supply_path(supply) %>
+        <% end %>
       </div>
     </div>
   <% end %>

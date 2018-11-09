@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   def index
+    @supplies = current_user.reserved_supplies
   end
 
   def show

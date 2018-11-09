@@ -1,10 +1,10 @@
 <h1>Supply#show</h1>
 
-<h1><%= @supply.name %></h1>
+<h1><%= @supply.product_name %></h1>
 <% if @supply.image.attached? %>
-	<%= image_tag @supply.image.variant(resize: '100x200') %>
+	<%= image_tag url_for(@supply.image) %>
 <% end %>
 
 <h2>Description:</h2>
-	<p><%= @supply.description %></p>
+<p><%= @supply.description %></p>
 

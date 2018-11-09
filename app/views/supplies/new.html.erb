@@ -1,11 +1,15 @@
 <h1>Create a New Supply (for Donation):</h1>
 <p>Use the form below to upload a new available supply. (Note: You may include the quantity in the description, if desired).</p>
+
 <%= simple_form_for @supply do |f| %>
+  <%= flash[:supply_errors] %>
   <%=f.input :category, as: :select,
      collection: Supply::CATEGORIES %>
   <%= f.input :brand %>
   <%= f.input :product_name %>
   <%= f.input :product_id %>
   <%= f.input :description %>
+  <%= f.input :image, as: :file %>
+  <p> </p>
   <%= f.button :submit, 'Create' %>
 <% end %>

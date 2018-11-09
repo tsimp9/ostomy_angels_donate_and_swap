@@ -1,6 +1,6 @@
 class SuppliesController < ApplicationController
   def show
-    @supplies = Supply.find(params[:id])
+    @supply = Supply.find(params[:id])
   end
 
   def index
@@ -31,14 +31,26 @@ class SuppliesController < ApplicationController
     @supply = current_user.supplies.find(params[:id])
     @supply.update(supply_params)
       if @supply.save
-       redirect_to supply_path(@supply), notice: "Supply Changed"
+       redirect_to supply_path(@supply), notice: "Supply successfully edited"
       else
        render :edit
       end
   end
 
+  def reserve
+    @supply = Supply.find(params[:id])
+    @supply.reserved_user = current_user
+
+    if @supply.save
+      redirect_to reservations_path
+    else
+      flash[:errors] = @supply.errors.full_messages
+      redirect_to supplies_path
+    end
+  end
+
 private  
   def supply_params
-    params.require(:supply).permit(:category, :brand, :product_name, :product_id, :description)
+    params.require(:supply).permit(:category, :brand, :product_name, :product_id, :description, :image)
   end
 end
