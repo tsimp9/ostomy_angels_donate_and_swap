@@ -31,7 +31,7 @@ class SuppliesController < ApplicationController
     @supply = current_user.supplies.find(params[:id])
     @supply.update(supply_params)
       if @supply.save
-       redirect_to supply_path(@supply), notice: "Recipe Changed"
+       redirect_to supply_path(@supply), notice: "Supply Changed"
       else
        render :edit
       end

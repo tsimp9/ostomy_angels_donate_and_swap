@@ -7,10 +7,7 @@ class User < ApplicationRecord
   validates :name, uniqueness: true
 
   has_many :supplies
-  # has_many :available_supplies through :supplies
-
-  # has_many :supplies
-  # has_many :needed_supplies through :supplies
+  has_many :reserved_supplies, foreign_key: :reserved_user_id
 
   has_many :shippingaddresses
 
