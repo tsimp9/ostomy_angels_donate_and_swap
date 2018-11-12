@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'shipping_addresses/new'
+  get 'shipping_addresses/create'
+  get 'shipping_addresses/edit'
+  get 'shipping_addresses/update'
+  get 'shipping_addresses/destroy'
+  get 'shipping_addresses/show'
+  get 'shipping_addresses/index'
   resources :reservations
   resources :supplies do
     member do
@@ -6,6 +13,7 @@ Rails.application.routes.draw do
       get "unreserve"
     end
   end
+  resources :shipping_addresses
   get 'home/index'
   devise_for :users, controllers: {
         registrations: 'users/registrations'

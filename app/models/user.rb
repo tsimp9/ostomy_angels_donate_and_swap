@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :supplies
   has_many :reserved_supplies, foreign_key: :reserved_user_id, class_name: "Supply"
 
-  has_many :shippingaddresses
+  has_many :shipping_addresses
 
   has_one_attached :avatar
 

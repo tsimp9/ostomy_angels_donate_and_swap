@@ -13,3 +13,7 @@
   <p> </p>
   <%= f.button :submit, 'Create' %>
 <% end %>
+
+<p>Please note that you must also add a shipping address if you are uploading supplies.</p>
+
+<%= link_to '<button type="button">Add Shipping Address</button>'.html_safe, new_shipping_address_path %><span></span>

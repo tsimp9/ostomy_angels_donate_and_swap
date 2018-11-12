@@ -1,10 +1,17 @@
-<h1>Supply#show</h1>
+<h1><%= @supply.product_name %><span> </span>Supply</h1>
 
-<h1><%= @supply.product_name %></h1>
 <% if @supply.image.attached? %>
-	<%= image_tag url_for(@supply.image) %>
+    <h4 class="c-title c-title--tiny"><%= image_tag url_for(@supply.image) %></h4>
 <% end %>
-
+<h4 class="c-title c-title--tiny"><%= @supply.product_name %></h4>
+<h4 class="c-title"><%= @supply.brand + ' ' + @supply.product_id %></h4>
+<h4 class="c-title c-title--tiny">Category: <%= @supply.category %></h4>
+<br>
 <h2>Description:</h2>
 <p><%= @supply.description %></p>
-
+<br>
+<h4>Location: <%= @supply.try(:user).try(:shipping_addresses).try(:first).city + "," + " " + @supply.try(:user).try(:shipping_addresses).try(:first).state %></h4>
+Owner: <%= @supply.try(:user).try(:name) %>
+<br>
+<br>
+<%= link_to "Go Back to Supplies List", supplies_path %>

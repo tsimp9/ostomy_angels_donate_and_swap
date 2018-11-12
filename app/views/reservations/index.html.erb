@@ -3,7 +3,7 @@
 	
 <% @supplies.each do |supply| %>
   <li>
-	  <%= supply.brand + " " + supply.product_name %> 
+	  <%= supply.brand + " " + supply.product_name %><span></span> <%= link_to "Cancel Reservation", unreserve_supply_path(supply) %>
   </li>
 <% end %>
 </ul>
