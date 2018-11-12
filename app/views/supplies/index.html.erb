@@ -12,6 +12,10 @@
         <h4 class="c-title"><%= supply.brand + ' ' + supply.product_id %></h4>
         <h4 class="c-title c-title--tiny">Description: <%= supply.description %></h4>
         <h4 class="c-title c-title--tiny">Category: <%= supply.category %></h4> 
+
+        <%= link_to '<button type="button">Details</button>'.html_safe, supply_path(supply) %><span></span>
+
+
         <% if supply.user == current_user %>
           (This supply belongs to you).
         <% elsif supply.reserved_user == current_user %>

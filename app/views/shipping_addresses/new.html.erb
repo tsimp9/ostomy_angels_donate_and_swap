@@ -1,0 +1,13 @@
+<h1>Add a Shipping Address</h1>
+<h1>Note: A shipping address must be entered in order to use this application. Other users will have no access to your street address.</h1>
+
+<%= simple_form_for @shipping_address do |f| %>
+  <%= flash[:shipping_address_errors] %>
+  <%= f.input :street1 %>
+  <%= f.input :street2 %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <p> </p>
+  <%= f.button :submit, 'Create' %>
+<% end %>

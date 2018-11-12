@@ -18,112 +18,128 @@ supplies = [
     brand: "Hollister",
     product_id: "18372",
     description: "Beige closed-end pouches, 1-3/4 inches or 44mm opening, color match green",
-    image_name: "hollister_18372.jpg"
+    image_name: "hollister_18372.jpg",
+    user_id: 1
   },
   { category: "Bags/Pouches",
     product_name: "Premier One-Piece Drainable Ostomy Pouch",
     brand: "Hollister",
     product_id: "8940",
     description: "Pre-sized 1-9/16 in, 12 inch length",
-    image_name: "hollister_8940.jpg"
+    image_name: "hollister_8940.jpg",
+    user_id: 4
   },
   { category: "Bags/Pouches",
     product_name: "New Image Lock N Roll Microseal Closure Drainable Pouches",
     brand: "Hollister",
     product_id: "18194",
     description: "Transparent two piece, 2-3/4 inches flange (Blue), integrated (Velcro-like) closure system with odor barrier",
-    image_name: "hollister_18194.jpg"
+    image_name: "hollister_18194.jpg",
+    user_id: 3
   },
   { category: "Adhesive Removers",
     product_name: "Brava Adhesive Remover Spray 1.7 oz Bottle",
     brand: "Coloplast",
     product_id: "120105",
     description: "1.7 oz (50ml) Spray Bottle",
-    image_name: "coloplast_120105_adhesive_remover.jpeg"
+    image_name: "coloplast_120105_adhesive_remover.jpeg",
+    user_id: 2
   },
   { category: "Rings",
     product_name: "Adapt CeraRing Barrier Rings",
     brand: "Hollister",
     product_id: "8805",
     description: "Size - 2 inches/4.5mm width Ceramide-infused barrier rings (not rubber latex) designed to help support healthy skin and provide a custom fit to help prevent leakage and peristomal skin complications",
-    image_name: "hollister_8805_rings.jpg"
+    image_name: "hollister_8805_rings.jpg",
+    user_id: 4
   },
   { category: "Skin Barriers (Wafers) and Convex Inserts",
     product_name: "New Image FormaFlex Shape-to-Fit Skin Barriers",
     brand: "Hollister",
     product_id: "14104",
     description: "2-3/4 inches/70 mm flange, up to 2-1/4 inches/57 mm, blue match wafers",
-    image_name: "hollister_14104_wafer.jpg"
+    image_name: "hollister_14104_wafer.jpg",
+    user_id: 2
   },
   { category: "Stoma Caps",
     product_name: "SUR-FIT® Natura® Flange Cap with Filter, 1-3/4 Flange",
     brand: "Convatec",
     product_id: "401909",
     description: "Opaque stoma cap with 1-sided comfort panel",
-    image_name: "convatec_401909_cap.jpeg"
+    image_name: "convatec_401909_cap.jpeg",
+    user_id: 2
   },
   { category: "Paste",
     product_name: "Osto-Paste",
     brand: "Montreal Ostomy (BE/MO)",
     product_id: "(MO)OSTOPASTE",
     description: "4 oz tube of no sting and alcohol-free paste designed for use on irritated and sore skin",
-    image_name: "montreal_ostopaste.png"
+    image_name: "montreal_ostopaste.png",
+    user_id: 1
   },
   { category: "Sheets and Strips",
     product_name: "Skin Barrier Sheet",
     brand: "Safe n Simple",
     product_id: "SNS21605",
     description: "Skin friendly water resistant/hydrocolloid sheet that protects the skin from stoma output and gentle on skin",
-    image_name: "safensimple_sheet_sns21605.png"
+    image_name: "safensimple_sheet_sns21605.png",
+    user_id: 4
   },
   { category: "Skin Prep Wipes",
     product_name: "Skin Prep Protective Dressings - Wipes",
     brand: "Smith & Nephew",
     product_id: "420400",
     description: "Protective dressing that forms a protective film to help tapes and films adhere better",
-    image_name: "smith_wipes_420400.jpg"
+    image_name: "smith_wipes_420400.jpg",
+    user_id: 3
   },
   { category: "Powders",
     product_name: "Ostomy Protective Powder",
     brand: "Cardinal Health Essentials",
     product_id: "ZR1OZOPA",
     description: "1-oz bottle pectin-based powder protects irritated skin around the stoma. Increases wear time. Absorbs moisture.",
-    image_name: "cardinal_powder.jpeg"
+    image_name: "cardinal_powder.jpeg",
+    user_id: 2
   },
   { category: "Deodorants",
     product_name: "Brava Lubricating Deodorant",
     brand: "Coloplast",
     product_id: "12060BX",
     description: "0.25-oz satchets",
-    image_name: "brava_deodorant_satchet.jpg"
+    image_name: "brava_deodorant_satchet.jpg",
+    user_id: 1
   },
   { category: "Deodorants",
     product_name: "Devko Deodorant Tablets",
     brand: "Parthenon",
     product_id: "PADEVCO",
     description: "Tablets for odor control inside ostomy pouches or bag liners",
-    image_name: "devko_tablets.jpg"
+    image_name: "devko_tablets.jpg",
+    user_id: 4
   },
   { category: "Irrigation Kits - Ostomy",
     product_name: "Visi-Flow® Irrigator with Stoma Cone",
     brand: "Convatec",
     product_id: "401989",
     description: "Designed for people with a colostomy where irrigation is indicated. Front-fill reusable bag",
-    image_name: "convatec_visiflow_irrigator_401989.jpeg"
+    image_name: "convatec_visiflow_irrigator_401989.jpeg",
+    user_id: 3
   },
   { category: "Ostomy Accessories",
     product_name: "Ostomy Belt",
     brand: "Phoenix Ostomy",
     product_id: "PS300",
     description: "Size Medium/Large (26\"- 36\")",
-    image_name: "phoenix_ostomy_belt_ps300.jpeg"
+    image_name: "phoenix_ostomy_belt_ps300.jpeg",
+    user_id: 2
   },
   { category: "Ostomy Accessories",
     product_name: "Biodegradable Colostomy Pouch Liners",
     brand: "Colo-Majic",
     product_id: "N/A",
     description: "Size Large to fit diameters from 2¼ inch (57mm) to 2¾ inch (70mm)",
-    image_name: "colo_majic.jpg"
+    image_name: "colo_majic.jpg",
+    user_id: 1
   }
 ]
 
@@ -137,3 +153,5 @@ supplies.each do |supply|
     )
     new_supply.image.attach(io: File.open("tmp/#{supply[:image_name]}"), filename: "#{supply[:image_name]}")
   end
+
+
