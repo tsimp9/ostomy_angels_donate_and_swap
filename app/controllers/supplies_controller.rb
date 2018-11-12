@@ -37,6 +37,7 @@ class SuppliesController < ApplicationController
       end
   end
 
+#Reserve a supply
   def reserve
     @supply = Supply.find(params[:id])
     @supply.reserved_user = current_user
@@ -46,6 +47,19 @@ class SuppliesController < ApplicationController
     else
       flash[:errors] = @supply.errors.full_messages
       redirect_to supplies_path
+    end
+  end
+
+#Cancel reservation of a supply
+  def unreserve 
+    @supply = Supply.find(params[:id])
+    # @supply.reserved_user = current_user
+
+    if @supply.delete
+      redirect_to reservations_path, notice: "Supply removed from reserved list"
+    else
+      flash[:errors] = @supply.errors.full_messages
+      redirect_to_supplies_path
     end
   end
 

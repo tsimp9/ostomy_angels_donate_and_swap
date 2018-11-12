@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :supplies do
     member do
       get "reserve"
+      get "unreserve"
     end
   end
   get 'home/index'

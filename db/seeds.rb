@@ -113,7 +113,7 @@ supplies = [
   },
   { category: "Ostomy Accessories",
     product_name: "Ostomy Belt",
-    brand: "Phoeix Ostomy",
+    brand: "Phoenix Ostomy",
     product_id: "PS300",
     description: "Size Medium/Large (26\"- 36\")",
     image_name: "phoenix_ostomy_belt_ps300.jpeg"

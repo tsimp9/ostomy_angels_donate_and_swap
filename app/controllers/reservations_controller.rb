@@ -21,5 +21,8 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    supply = Supply.find(params[:supply_id])
+    @supply.reserved_user = current_user
+    reserved_supply.delete(reserved_user: current_user)
   end
 end

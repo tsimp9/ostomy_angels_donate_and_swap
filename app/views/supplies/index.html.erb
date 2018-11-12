@@ -13,9 +13,9 @@
         <h4 class="c-title c-title--tiny">Description: <%= supply.description %></h4>
         <h4 class="c-title c-title--tiny">Category: <%= supply.category %></h4> 
         <% if supply.user == current_user %>
-          (This is your supply)
+          (This supply belongs to you).
         <% elsif supply.reserved_user == current_user %>
-          You have already reserved this item. <%= link_to "Cancel Reservation" %>
+          You have already reserved this item. <%= link_to "Cancel Reservation", unreserve_supply_path(supply) %>
         <% else %>
           <%= link_to "Reserve This Item", reserve_supply_path(supply) %>
         <% end %>

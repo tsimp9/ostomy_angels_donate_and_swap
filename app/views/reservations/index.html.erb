@@ -3,7 +3,9 @@
 	
 <% @supplies.each do |supply| %>
   <li>
-	  <%= supply.product_name %> 
+	  <%= supply.brand + " " + supply.product_name %> 
   </li>
 <% end %>
 </ul>
+
+<%= link_to "Go Back to Supplies List", supplies_path %>
