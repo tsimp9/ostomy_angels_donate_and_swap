@@ -4,5 +4,14 @@
   Avatar: <%= form.file_field :avatar %>
   <%= form.submit %>
   <% end %>
+<br>
+Current Shipping Address:
+<br>
+<br>
+<%#= current_user.shipping_addresses.each do  %>
+<%#= @supply.try(:user).try(:shipping_addresses).try(:first).city + "," + " " + @supply.try(:user).try(:shipping_addresses).try(:first).state %></h4>
 
-<%= link_to '<button type="button">Details</button>'.html_safe, new_shipping_address_path %><span></span>
+<%= link_to '<button type="button">Add Shipping Address</button>'.html_safe, new_shipping_address_path %><span></span>
+
+
+<%# if conditional %>

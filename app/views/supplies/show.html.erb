@@ -10,7 +10,9 @@
 <h2>Description:</h2>
 <p><%= @supply.description %></p>
 <br>
-<h4>Location: <%= @supply.try(:user).try(:shipping_addresses).try(:first).city + "," + " " + @supply.try(:user).try(:shipping_addresses).try(:first).state %></h4>
+<% if @supply.try(:user).try(:shipping_addresses).try(:first) %>
+  <h4>Location: <%= @supply.user.shipping_addresses.first.city + "," + " " + @supply.user.shipping_addresses.first.state %></h4>
+<% end %>
 Owner: <%= @supply.try(:user).try(:name) %>
 <br>
 <br>
