@@ -14,16 +14,19 @@
  *= require_self
  */
 
+.navbar {
+  background-color: #d44030 !important;
+}
 
-body {
+/*body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Alegreya', serif;
   margin: 0;
   width: 100%;
-}
+}*/
 
 /*HEADER-FOOTER*/
-
+/*
  header {
   background-image: linear-gradient(to right, #f31d07, #73382e);
   color: #ffffff;
@@ -38,7 +41,7 @@ body {
   float: right;
   height: 60px;
   vertical-align: middle;
-}
+}*/
 
 
 footer {
@@ -80,10 +83,10 @@ footer {
   color: white;
 }
   
-header div {
+/*header div {
   display: inline;
   padding: 0px 0px 0px 22px;
-}
+}*/
 
 footer div {
   display: inline;
@@ -92,13 +95,13 @@ footer div {
   padding: 0px 0px 0px 45px;
 }
 
-header a {
+/*header a {
   color: #ffffff;
   font-size: 18px;
   margin: 0px 24px 0px 0px;
   text-decoration: none;
   vertical-align: middle;
-}
+}*/
 
 .head-logo {
   position: relative;

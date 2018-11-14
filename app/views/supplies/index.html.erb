@@ -1,7 +1,30 @@
-<div class="c-section">
-  <h1 class="c-title c-title--large">Browse All Ostomy Supplies</h1>
+<div class="container mt-5">
+  <div class="row">
+    <% @supplies.each do |supply| %>
+      <div class="col-sm-3">
+        <div class="card mb-3">
+          <% if supply.image.attached? %>
+            <%= image_tag(url_for(supply.image), class: "card-img-top") %>
+          <% end %>
+
+          <div class="card-body">
+            <h5 class="card-title"><%= supply.product_name %></h5>
+            <p class="card-text"><%= supply.brand + ' ' + supply.product_id %></p>
+            <a href="<%= supply_path(supply) %>" class="btn btn-primary">Details</a>
+            <% if supply.user == current_user %>
+              (This supply belongs to you).
+            <% elsif supply.reserved_user == current_user %>
+              You have already reserved this item. <%= link_to "Cancel Reservation", unreserve_supply_path(supply) %>
+            <% else %>
+              <%= link_to "Reserve This Item", reserve_supply_path(supply) %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-<div class="c-section">
+
   <% @supplies.each do |supply| %>
     <div class="c-card u-margin-bottom-small">
       <div class="c-card">
@@ -26,4 +49,3 @@
       </div>
     </div>
   <% end %>
-</div>
