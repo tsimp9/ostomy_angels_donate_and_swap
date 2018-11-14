@@ -1,3 +1,14 @@
-Reserved#notify
+Hi, <%= @supply.user.name %>
 
-<%= @greeting %>, find me in app/views/reserved_mailer/notify.text.erb
+Thank you for adding one or more supplies to our website for donation to those in need. This email is to notify you that a user has reserved one or your supplies for receipt.
+Please contact <%= @supply.reserved_user.name %> at email address <%= @supply.reserved_user.email %> in order to complete the transaction.
+Once the transaction is complete, please delete the supply from our site's supply list. This action helps us to maintain current available inventory.
+Thanks so much for your willingness to donate much needed supplies!
+
+Supply Reserved: 
+
+
+Yours truly,
+
+Topeka D. Simpson,
+Ostomy Angels Donate and Swap
