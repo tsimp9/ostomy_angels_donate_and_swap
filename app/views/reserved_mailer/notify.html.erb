@@ -1,0 +1,17 @@
+<h1>Hi, <%= @supply.user.name %></h1>
+
+<p>
+  Thank you for adding one or more supplies to our website for donation to those in need. This email is to notify you that a user has reserved one or your supplies for receipt.
+</p>
+<p>Please contact <%= @supply.reserved_user.name %> at email address <%= @supply.reserved_user.email %> in order to complete the transaction.</p>
+<p>Once the transaction is complete, please delete the supply from our site's supply list. This action helps us to maintain current available inventory.</p>
+<p>Thanks so much for your willingness to donate much needed supplies!</p>
+<br>
+<br>
+<p>Supply Reserved: </p>
+<br>
+<br>
+<p>Yours truly,</p>
+<br>
+<p>Topeka D. Simpson,</p>
+<p>Ostomy Angels Donate and Swap</p>
