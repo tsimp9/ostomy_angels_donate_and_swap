@@ -1,4 +1,4 @@
-<h1><%= @supply.product_name %><span> </span>Supply</h1>
+<h1><%= @supply.product_name %></h1>
 
 <% if @supply.image.attached? %>
     <h4 class="c-title c-title--tiny"><%= image_tag url_for(@supply.image) %></h4>
@@ -10,10 +10,58 @@
 <h2>Description:</h2>
 <p><%= @supply.description %></p>
 <br>
-<% if @supply.try(:user).try(:shipping_addresses).try(:first) %>
-  <h4>Location: <%= @supply.user.shipping_addresses.first.city + "," + " " + @supply.user.shipping_addresses.first.state %></h4>
-<% end %>
+
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+    width: 50%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+</style>
+    <input id="address" type="hidden" value="4 Harrison Bridge Rd, Simpsonville, SC 29681">
+<h4>Location: <span id="location"><%= @supply.try(:user).try(:shipping_addresses).try(:first).city + "," + " " + @supply.try(:user).try(:shipping_addresses).try(:first).state %></span></h4>
+
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: 34.840190, lng: -82.398320}
+        });
+        var geocoder = new google.maps.Geocoder();
+    geocodeAddress(geocoder, map);
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('location').innerHTML;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+    </script>
+    <script src=<%="https://maps.google.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}&callback=initMap"%>> </script>
+
+<br>
+<br>
 Owner: <%= @supply.try(:user).try(:name) %>
 <br>
 <br>
 <%= link_to "Go Back to Supplies List", supplies_path %>
+
+
+<%# h4 Location: line is location of the user/supply %>
