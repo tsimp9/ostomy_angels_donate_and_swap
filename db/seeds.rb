@@ -11,6 +11,41 @@ User.create!(name: "Rowan Pope", email: "eli@b613.com", password: "testing")
 User.create!(name: "Olivia Pope", email: "olivia@usa.com", password: "testing1")
 User.create!(name: "Huck", email: "huck@b613.com", password: "testing3")
 
+shipping_addresses = [
+  { street1: "325 Adams Rd.",
+    street2: "",
+    city: "Grinchville",
+    state: "TN",
+    zip: "34009",
+    user_id: 1
+  },
+ { street1: "425 Washington Ave",
+    street2: "",
+    city: "Washington",
+    state: "DC",
+    zip: "61300",
+    user_id: 2
+  },
+  { street1: "400 Scandal Lane",
+    street2: "",
+    city: "Washington",
+    state: "DC",
+    zip: "61300",
+    user_id: 3
+  }, 
+  { street1: "222 Time Ave",
+    street2: "",
+    city: "Anderson",
+    state: "SC",
+    zip: "29621",
+    user_id: 4
+  }
+]
+
+shipping_addresses.each do |shipping_address|
+    new_shipping_address = ShippingAddress.create!(shipping_address)
+end
+
 
 supplies = [
   { category: "Bags/Pouches",
@@ -149,7 +184,8 @@ supplies.each do |supply|
       product_name: supply[:product_name],
       brand: supply[:brand],
       product_id: supply[:product_id],
-      description: supply[:description]
+      description: supply[:description],
+      user_id: supply[:user_id]
     )
     new_supply.image.attach(io: File.open("tmp/#{supply[:image_name]}"), filename: "#{supply[:image_name]}")
   end
