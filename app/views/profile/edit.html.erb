@@ -1,4 +1,7 @@
 <h1>Edit Profile</h1>
+<% if current_user.avatar.attached? %>
+	<%= image_tag current_user.avatar %>
+<% end %>
 <%= form_for current_user, url: profile_path do |form| %>
   Name: <%= form.text_field :name %>
   Avatar: <%= form.file_field :avatar %>
@@ -12,6 +15,5 @@ Current Shipping Address:
 <%#= @supply.try(:user).try(:shipping_addresses).try(:first).city + "," + " " + @supply.try(:user).try(:shipping_addresses).try(:first).state %></h4>
 
 <%= link_to '<button type="button">Add Shipping Address</button>'.html_safe, new_shipping_address_path %><span></span>
-
 
 <%# if conditional %>
