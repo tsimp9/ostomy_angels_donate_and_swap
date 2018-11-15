@@ -10,13 +10,14 @@ User.create!(name: "Topeka", email: "tsimp9@gmail.com", password: "tyson23")
 User.create!(name: "Rowan Pope", email: "eli@b613.com", password: "testing")
 User.create!(name: "Olivia Pope", email: "olivia@usa.com", password: "testing1")
 User.create!(name: "Huck", email: "huck@b613.com", password: "testing3")
+User.create!(name: "T'Challa", email: "BlackPanther@wakanda.com", password: "testing")
 
 shipping_addresses = [
-  { street1: "325 Adams Rd.",
+  { street1: "10 Imaginary Rd.",
     street2: "",
-    city: "Grinchville",
-    state: "TN",
-    zip: "34009",
+    city: "Greenville",
+    state: "SC",
+    zip: "29607",
     user_id: 1
   },
  { street1: "425 Washington Ave",
@@ -39,6 +40,13 @@ shipping_addresses = [
     state: "SC",
     zip: "29621",
     user_id: 4
+  },
+  { street1: "5000 Marvel Lane",
+    street2: "",
+    city: "Oakland",
+    state: "CA",
+    zip: "94577",
+    user_id: 5
   }
 ]
 
@@ -86,7 +94,7 @@ supplies = [
     product_id: "8805",
     description: "Size - 2 inches/4.5mm width Ceramide-infused barrier rings (not rubber latex) designed to help support healthy skin and provide a custom fit to help prevent leakage and peristomal skin complications",
     image_name: "hollister_8805_rings.jpg",
-    user_id: 4
+    user_id: 5
   },
   { category: "Skin Barriers (Wafers) and Convex Inserts",
     product_name: "New Image FormaFlex Shape-to-Fit Skin Barriers",
