@@ -10,7 +10,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= supply.product_name %></h5>
             <p class="card-text"><%= supply.brand + ' ' + supply.product_id %></p>
-            <a href="<%= supply_path(supply) %>" class="btn btn-primary">Details</a>
+            <a href="<%= supply_path(supply) %>" class="btn btn-danger">Details</a>
             <% if supply.user == current_user %>
               (This supply belongs to you).
             <% elsif supply.reserved_user == current_user %>
@@ -24,28 +24,3 @@
     <% end %>
   </div>
 </div>
-
-  <% @supplies.each do |supply| %>
-    <div class="c-card u-margin-bottom-small">
-      <div class="c-card">
-        <% if supply.image.attached? %>
-          <h4 class="c-title c-title--tiny"><%= image_tag(url_for(supply.image)) %></h4>
-        <% end %>
-        <h4 class="c-title c-title--tiny"><%= supply.product_name %></h4>
-        <h4 class="c-title"><%= supply.brand + ' ' + supply.product_id %></h4>
-        
-        <h4 class="c-title c-title--tiny">Category: <%= supply.category %></h4> 
-
-        <%= link_to '<button type="button">Details</button>'.html_safe, supply_path(supply) %><span></span>
-
-
-        <% if supply.user == current_user %>
-          (This supply belongs to you).
-        <% elsif supply.reserved_user == current_user %>
-          You have already reserved this item. <%= link_to "Cancel Reservation", unreserve_supply_path(supply) %>
-        <% else %>
-          <%= link_to "Reserve This Item", reserve_supply_path(supply) %>
-        <% end %>
-      </div>
-    </div>
-  <% end %>

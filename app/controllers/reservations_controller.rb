@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
   def create
     supply = Supply.find(params[:supply_id])
     supply.update(reserved_user: current_user)
+    ReservedMailer.notify(supply)
   end
 
   def update
