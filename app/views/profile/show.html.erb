@@ -1,8 +1,11 @@
-<h1><%= current_user.name %>'s Profile </h1>
+<h1><%= current_user.name %>'s Profile: </h1>
 <% if current_user.avatar.attached? %>
 	<%= image_tag current_user.avatar %>
 <% end %>
 <h1>User Name - <%= current_user.name %></h1>
+<br>
+<%= link_to '<button type="button">Update Your Profile</button>'.html_safe, profile_edit_path %><span></span>
+
 
 <!-- Only try to display image tag if current user has one attached -->
 

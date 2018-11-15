@@ -1,4 +1,12 @@
-<%= link_to '<button type="button">Add a New Supply</button>'.html_safe, new_supply_path %><span></span>
+<div class="container">
+  <h1>Available Supplies</h1>
+  <p>View the list of supplies below, and reserve the item(s) you would like to obtain. You may also click on the "Details" button for each supply for additional detail and location (city and state only) of the supply. The owner will be notified via email to contact you for completion of the transaction.</p>
+</div>
+
+<div class="container mt-5">
+  <a href="<%= new_supply_path %>" class="btn btn-danger">Add a New Supply</a>
+</div>
+<%#= link_to '<button type="button">Add a New Supply</button>'.html_safe, new_supply_path %><span></span>
 <div class="container mt-5">
   <div class="row">
     <% @supplies.each do |supply| %>
