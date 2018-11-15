@@ -13,6 +13,15 @@
       <p><%= @supply.description %></p>
       <br>
 
+    <% if @supply.user == current_user %>
+        (This supply belongs to you).
+      <% elsif @supply.reserved_user == current_user %>
+        You have already reserved this item. <%= link_to "Cancel Reservation", unreserve_supply_path %>
+      <% else %>
+        <%= link_to "Reserve This Item", reserve_supply_path(@supply), class: "btn btn-primary" %>
+      <% end %>    
+
+
       <br>
       <br>
       Owner: <%= @supply.try(:user).try(:name) %>
@@ -69,8 +78,7 @@
               });
             }
           </script>
-          <script src=<%="https://maps.google.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}&callback=initMap"%>> </script>
-
+          <script src=<%="https://maps.google.com/maps/api/js?key=AIzaSyDcfVbfxKwrKUzrZY3BeAdOOSxM1B6_35M&callback=initMap"%>> </script>
     </div>
   </div>
 </div>

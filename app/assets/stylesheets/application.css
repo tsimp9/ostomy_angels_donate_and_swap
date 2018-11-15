@@ -15,7 +15,7 @@
  */
 
 .navbar {
-  background-color: #d44030 !important;
+  background-color: #8c1616 !important;
 }
 
 /*body {
@@ -107,4 +107,16 @@ footer div {
   position: relative;
   right: 4px;
   top: 2px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: contain;
+}
+
+.btn-primary {
+  background-color: #185494;
+  border-color: #185494;
+}
 

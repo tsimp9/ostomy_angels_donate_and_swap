@@ -2,6 +2,7 @@
   <div class="jumbotron mt-5">
     <h1 class="display-4">Available Supplies</h1>
     <p class="lead">View the list of supplies below, and reserve the item(s) you would like to obtain. You may also click on the "Details" button for each supply for additional detail and location (city and state only) of the supply. The owner will be notified via email to contact you for completion of the transaction.</p>
+  </div>
 </div>
 
 <div class="container mt-5">
@@ -19,14 +20,19 @@
 
           <div class="card-body">
             <h5 class="card-title"><%= supply.product_name %></h5>
-            <p class="card-text"><%= supply.brand + ' ' + supply.product_id %></p>
+            <p class="card-text">
+              <%= supply.brand + ' ' + supply.product_id %>
+            </p>
+              <% if supply.user == current_user %>
+                <p class="card-text">
+                  (This supply is yours).
+                </p>
+              <% end %>
             <a href="<%= supply_path(supply) %>" class="btn btn-danger">Details</a>
-            <% if supply.user == current_user %>
-              (This supply belongs to you).
-            <% elsif supply.reserved_user == current_user %>
+            <% if supply.reserved_user == current_user %>
               You have already reserved this item. <%= link_to "Cancel Reservation", unreserve_supply_path(supply) %>
             <% else %>
-              <%= link_to "Reserve This Item", reserve_supply_path(supply) %>
+              <%= link_to "Reserve", reserve_supply_path(supply), class: "btn btn-primary" %>
             <% end %>
           </div>
         </div>
