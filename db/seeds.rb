@@ -195,7 +195,7 @@ supplies.each do |supply|
       description: supply[:description],
       user_id: supply[:user_id]
     )
-    new_supply.image.attach(io: File.open("tmp/#{supply[:image_name]}"), filename: "#{supply[:image_name]}")
+    new_supply.image.attach(io: File.open("lib/#{supply[:image_name]}"), filename: "#{supply[:image_name]}")
   end
 
 
