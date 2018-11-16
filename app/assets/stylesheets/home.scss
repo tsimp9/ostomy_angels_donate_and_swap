@@ -1,5 +1,5 @@
 .home_page {
-  background-image: url(heart-steth-pexels.jpg);
+  background: image-url("heart-steth-pexels.jpg");
   background-size: cover;
   min-height: 100%;
   width: 100%;
@@ -9,3 +9,23 @@
 
 }
 
+.contact_page {
+  background: image-url("hands.jpg");
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+
+}
+
+.links_page {
+  background: image-url("people.jpeg");
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+}
