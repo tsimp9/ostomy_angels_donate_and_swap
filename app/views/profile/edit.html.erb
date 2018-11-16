@@ -1,4 +1,5 @@
 <h1>Edit Profile</h1>
+<br>
 <% if current_user.avatar.attached? %>
 	<%= image_tag current_user.avatar %>
 <% end %>
@@ -8,9 +9,8 @@
   <%= form.submit %>
   <% end %>
 <br>
-Current Shipping Address:
-<br>
-<br>
+<!-- Current Shipping Address:
+ --><br>
 <%#= current_user.shipping_addresses.each do  %>
 <%#= @supply.try(:user).try(:shipping_addresses).try(:first).city + "," + " " + @supply.try(:user).try(:shipping_addresses).try(:first).state %></h4>
 
